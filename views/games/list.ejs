@@ -1,0 +1,25 @@
+<% layout('layouts/user') -%>
+<div class="card mx-auto" style="max-width:900px;">
+  <div class="card-body">
+    <h4>Games</h4>
+    <div id="games-list" class="row gy-3">
+      <% games.forEach(g => { %>
+        <div class="col-md-6">
+          <div class="card p-2">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-1"><%= g.title %></h6>
+                <small class="text-muted"><%= g.description %></small>
+              </div>
+              <div>
+                <button class="btn btn-sm btn-primary start-game" data-slug="<%= g.slug %>">Start (butuh ad)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+<script src="/js/games.js"></script>
