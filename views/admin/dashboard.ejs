@@ -1,0 +1,82 @@
+<% layout('layouts/admin') -%>
+
+<div class="container-fluid">
+  <div class="row mb-3">
+    <div class="col-md-8">
+      <h3>Dashboard</h3>
+      <p class="text-muted">Overview system & activity</p>
+    </div>
+    <div class="col-md-4 text-end">
+      <button id="btnReloadStats" class="btn btn-sm btn-outline-primary">Reload</button>
+    </div>
+  </div>
+
+  <div id="admin-widgets" class="row gy-3">
+    <div class="col-md-3">
+      <div class="card p-3"><h6>Total Revenue</h6><div id="statRevenue">-</div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card p-3"><h6>Total Expense</h6><div id="statExpense">-</div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card p-3"><h6>Net Profit</h6><div id="statNet">-</div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card p-3"><h6>Admin Share (50%)</h6><div id="statShare">-</div></div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card p-3">
+        <h6>Users (top)</h6>
+        <div style="max-height:320px; overflow:auto;">
+          <table class="table table-sm" id="adminUsersTable">
+            <thead><tr><th>#</th><th>tg_id</th><th>name</th><th>email</th><th>points</th><th>action</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h6>Withdraw Requests</h6>
+        <div id="withdrawList" style="max-height:320px;overflow:auto"></div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="card p-3">
+        <h6>Ad Views (Last 30 days)</h6>
+        <canvas id="adChart" height="120"></canvas>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="card p-3">
+        <h6>Server Monitor</h6>
+        <pre id="monitorPre" style="white-space:pre-wrap"></pre>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="card p-3">
+        <h6>Ads / Settings (Superadmin)</h6>
+        <form id="settingsForm" class="row g-2">
+          <div class="col-md-4">
+            <input name="key" class="form-control" placeholder="key e.g. ads_script">
+          </div>
+          <div class="col-md-6">
+            <textarea name="value" class="form-control" placeholder="value"></textarea>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-success w-100">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/admin.js"></script>
