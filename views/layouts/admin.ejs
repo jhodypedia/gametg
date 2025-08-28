@@ -1,0 +1,30 @@
+<% layout('layouts/main') -%>
+<% /* Admin layout with sidebar */ %>
+
+<div class="d-flex vh-100">
+  <nav id="sidebar" class="bg-dark text-white p-3" style="width:260px;">
+    <div class="d-flex align-items-center mb-3">
+      <i class="fa-solid fa-shield-halved fa-2x me-2"></i>
+      <div>
+        <div class="fw-bold">Admin Panel</div>
+        <small class="text-muted">Superadmin</small>
+      </div>
+    </div>
+
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link text-white" href="/_adm/dashboard"><i class="fa fa-chart-line me-2"></i> Dashboard</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#" data-nav="users"><i class="fa fa-users me-2"></i> Users</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#" data-nav="games"><i class="fa fa-gamepad me-2"></i> Games</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#" data-nav="withdraws"><i class="fa fa-wallet me-2"></i> Withdraws</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#" data-nav="ads"><i class="fa fa-ad me-2"></i> Ads & Settings</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#" data-nav="monitor"><i class="fa fa-server me-2"></i> Server Monitor</a></li>
+      <li class="nav-item mt-3"><a class="nav-link text-danger" href="/_adm/login"><i class="fa fa-sign-out-alt me-2"></i> Logout</a></li>
+    </ul>
+  </nav>
+
+  <main class="flex-fill p-4 overflow-auto">
+    <%- body %>
+  </main>
+</div>
+
+<% var extraBottom = `<script src="/js/admin.js"></script>`; %>
