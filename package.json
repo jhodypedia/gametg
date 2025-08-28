@@ -1,0 +1,38 @@
+{
+  "name": "tg-webview-game",
+  "version": "1.0.0",
+  "description": "Telegram WebApp game with Adsterra rewarded ads and point system",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "addad": "node init.js"
+  },
+  "keywords": [
+    "telegram",
+    "webview",
+    "game",
+    "adsterra",
+    "express",
+    "ejs",
+    "mysql"
+  ],
+  "author": "YourName",
+  "license": "MIT",
+  "dependencies": {
+    "express": "",
+    "express-ejs-layouts": "",
+    "mysql2": "",
+    "body-parser": "",
+    "dotenv": "",
+    "cookie-parser": "",
+    "bcrypt": "",
+    "jsonwebtoken": "",
+    "axios": "",
+    "moment": "",
+    "cors": ""
+  },
+  "devDependencies": {
+    "nodemon": ""
+  }
+}
