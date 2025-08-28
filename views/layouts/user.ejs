@@ -1,7 +1,5 @@
-<% layout('layouts/main') -%>
 <% /* user layout injects Telegram WebApp script for WebApp context */ %>
 <% var extraHead = `<script src="https://telegram.org/js/telegram-web-app.js"></script>`; %>
-<%- include('../partials/_flash') || '' %>
 <main class="container py-4">
   <%- body %>
 </main>

@@ -7,7 +7,7 @@ module.exports = {
   db: {
     host: process.env.DB_HOST || "localhost",
     user: process.env.DB_USER || "root",
-    password: process.env.DB_PASS || "",
+    password: process.env.DB_PASS || "Arsleg32@",
     database: process.env.DB_NAME || "tg_game",
     waitForConnections: true,
     connectionLimit: 12,
